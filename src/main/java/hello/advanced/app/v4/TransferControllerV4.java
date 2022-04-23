@@ -24,7 +24,7 @@ public class TransferControllerV4 {
     }
 
     @GetMapping("/request")
-    public String transfer(String srcAccountNumber, String destAccountNumber, int amount) {
+    public String transfer(long srcAccountNumber, long destAccountNumber, int amount) {
         AbstractTemplate<String> template = new AbstractTemplate<String>(trace) {
             @Override
             protected String call() {
